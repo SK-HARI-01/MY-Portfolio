@@ -118,7 +118,7 @@ export default function Hero() {
           <div className="rounded-full p-2 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500">
             <div className="glass rounded-full w-80 h-80 md:w-96 md:h-96 overflow-hidden shadow-lg">
               <img
-                src="/images/Myphoto1.jpg"
+                src="./images/Myphoto1.jpg"
                 alt="HARIHARAN S K"
                 className="w-full h-full object-cover"
               />
