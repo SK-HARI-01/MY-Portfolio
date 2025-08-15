@@ -4,8 +4,8 @@ import { FiExternalLink } from 'react-icons/fi';
 import { FaAward } from 'react-icons/fa';
 
 const certificates = [
-  { id: 1, title: "Java Programming Certification", img: "./images/Java-crt.png" },
-  { id: 2, title: "TCS Code Vita Participation", img: "./images/Tcs-crt.png" },
+  { id: 1, title: "Java Programming Certification", img: "/images/Java-crt.png" },
+  { id: 2, title: "TCS Code Vita Participation", img: "/images/Tcs-crt.png" },
   // { id: 3, title: "Cloud Computing Certification", img: "./images/Cloud-crt.jpg" }
 ];
 
@@ -46,7 +46,7 @@ export default function Certificates() {
             onClick={() => setSelected(cert.img)}
           >
             <img 
-              src={cert.img} 
+                src={process.env.PUBLIC_URL + cert.img} 
               alt={cert.title} 
               className="w-full h-48 object-cover" 
             />

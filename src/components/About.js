@@ -4,14 +4,14 @@ import { FaUserAlt } from "react-icons/fa";
 import { FiSettings } from 'react-icons/fi';
 
 const skills = [
-  { name: "Java", src: "./images/java.png" },
-  { name: "Python", src: "./images/python.png" },
-  { name: "JavaScript", src: "./images/java-script.png" },
-  { name: "Spring Boot", src: "./images/Spring_Boot.svg" },
-  { name: "React", src: "./images/react.png" },
-  { name: "MySQL", src: "./images/mysql.png" },
-  { name: "AWS", src: "./images/aws.png" },
-  { name: "REST API", src: "./images/api.png" },
+  { name: "Java", src: "/images/java.png" },
+  { name: "Python", src: "/images/python.png" },
+  { name: "JavaScript", src: "/images/java-script.png" },
+  { name: "Spring Boot", src: "/images/Spring_Boot.svg" },
+  { name: "React", src: "/images/react.png" },
+  { name: "MySQL", src: "/images/mysql.png" },
+  { name: "AWS", src: "/images/aws.png" },
+  { name: "REST API", src: "/images/api.png" },
 ];
 
 export default function About() {
@@ -99,7 +99,7 @@ export default function About() {
                 className="flex flex-col items-center justify-center text-center group"
               >
                 <img
-                  src={skill.src}
+                  src={process.env.PUBLIC_URL + skill.src}
                   alt={skill.name}
                   loading="lazy"
                   className="w-16 h-16 md:w-20 md:h-20 object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-md"
