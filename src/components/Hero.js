@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Hero.css";
 
-
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -26,15 +25,14 @@ export default function Hero() {
       }}
     >
       {/* Animated gradient background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_200%] animate-gradient-x opacity-20"></div>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_200%] animate-gradient-x opacity-20 pointer-events-none"></div>
 
       {/* Particles */}
-      <div className="particle particle--1"></div>
-      <div className="particle particle--2"></div>
-      <div className="particle particle--3"></div>
+      <div className="particle particle--1 pointer-events-none"></div>
+      <div className="particle particle--2 pointer-events-none"></div>
+      <div className="particle particle--3 pointer-events-none"></div>
 
       {/* Content container */}
-      {/* On mobile: flex-col-reverse (text below photo), On desktop: flex-row */}
       <div className="max-w-6xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-10">
         
         {/* Left Text Section */}
@@ -74,38 +72,30 @@ export default function Hero() {
             I build fast, beautiful, accessible web apps with modern tech.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
-            className="mt-8 flex flex-col md:flex-row items-center justify-center md:justify-start gap-4"
+            className="mt-8 flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 w-full md:w-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.8, duration: 0.6 }}
           >
-            <motion.a
-              href="#projects"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-5 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg hover:opacity-90 transition-all"
-            >
-              View Projects
-            </motion.a>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-5 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg hover:opacity-90 transition-all"
-            >
-              Contact Me
-            </motion.a>
-            <motion.a
-              href="https://drive.google.com/file/d/1tlbUmfJHx1NkCzMYBtOaE93eC95Kxs97/view?usp=drivesdk"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-5 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg hover:opacity-90 transition-all"
-            >
-              View Resume
-            </motion.a>
+            {[
+              { href: "#projects", label: "View Projects" },
+              { href: "#contact", label: "Contact Me" },
+              { href: "https://drive.google.com/file/d/1tlbUmfJHx1NkCzMYBtOaE93eC95Kxs97/view?usp=drivesdk", label: "View Resume", external: true }
+            ].map((btn, i) => (
+              <motion.a
+                key={i}
+                href={btn.href}
+                target={btn.external ? "_blank" : "_self"}
+                rel={btn.external ? "noopener noreferrer" : undefined}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full md:w-auto text-center px-5 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg hover:opacity-90 transition-all"
+              >
+                {btn.label}
+              </motion.a>
+            ))}
           </motion.div>
         </motion.div>
 
