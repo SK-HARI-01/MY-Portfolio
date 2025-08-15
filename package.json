@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://SK-HARI-01.github.io/my-portfolio",
+  "homepage": "https://SK-HARI-01.github.io/My-Portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
