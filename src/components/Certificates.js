@@ -4,9 +4,9 @@ import { FiExternalLink } from 'react-icons/fi';
 import { FaAward } from 'react-icons/fa';
 
 const certificates = [
-  { id: 1, title: "Java Programming Certification", img: "/images/Java-crt.png" },
-  { id: 2, title: "TCS Code Vita Participation", img: "/images/Tcs-crt.png" },
-  // { id: 3, title: "Cloud Computing Certification", img: "/images/Cloud-crt.jpg" }
+  { id: 1, title: "Java Programming Certification", img: "./images/Java-crt.png" },
+  { id: 2, title: "TCS Code Vita Participation", img: "./images/Tcs-crt.png" },
+  // { id: 3, title: "Cloud Computing Certification", img: "./images/Cloud-crt.jpg" }
 ];
 
 export default function Certificates() {
