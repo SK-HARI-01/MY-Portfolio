@@ -1,0 +1,114 @@
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.projects-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* Popup-style floating card */
+.project-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  padding-bottom: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(0) scale(1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.project-desc {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.stack-container {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stack-tag {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Buttons always visible */
+.project-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-demo {
+  background: #2563eb;
+}
+
+.btn-demo:hover {
+  background: #1d4ed8;
+}
+
+.btn-code {
+  background: #90ee90;
+}
+
+.btn-code:hover {
+  background: #77dd77;
+}
+
+/* Center-to-Ends Hover Line */
+.hover-bar-center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+.project-card:hover .hover-bar-center {
+  width: 100%;
+}

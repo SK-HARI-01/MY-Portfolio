@@ -1,0 +1,53 @@
+/* Using Tailwind utilities for styles. */
+/* 1. Screen reveal animation from center to edges */
+@keyframes screenReveal {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+        opacity: 0;
+    }
+
+    100% {
+        clip-path: circle(150% at 50% 50%);
+        opacity: 1;
+    }
+}
+
+.screen-reveal {
+    animation: screenReveal 1.2s ease-out forwards;
+}
+
+/* 2. "Your Name" hover effect — color changes under 3px cursor radius */
+.name-hover {
+    position: relative;
+    cursor: pointer;
+    color: transparent;
+    background: linear-gradient(90deg, #9333ea, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: color 0.3s ease;
+}
+
+.name-hover:hover {
+    color: transparent;
+    background: linear-gradient(90deg, #22c55e, #3b82f6);
+    /* color shift on hover */
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* 3. Custom cursor effect for hover radius */
+.cursor-radius {
+    position: fixed;
+    width: 6px;
+    /* diameter 6px for 3px radius */
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: rgba(34, 197, 94, 0.8);
+    /* green highlight area */
+    mix-blend-mode: difference;
+    /* highlight text under cursor */
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
