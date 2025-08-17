@@ -82,7 +82,7 @@ export default function Hero() {
             {[
               { href: "#projects", label: "View Projects" },
               { href: "#contact", label: "Contact Me" },
-              { href: "https://drive.google.com/file/d/1tlbUmfJHx1NkCzMYBtOaE93eC95Kxs97/view?usp=drivesdk", label: "View Resume", external: true }
+              { href: "https://drive.google.com/file/d/1brfkPYOUjf0Yl28TsE85uwPPV7xiuUoC/view?usp=drivesdk", label: "View Resume", external: true }
             ].map((btn, i) => (
               <motion.a
                 key={i}
