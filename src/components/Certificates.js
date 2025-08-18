@@ -77,7 +77,7 @@ export default function Certificates() {
               animate={{ rotateY: 0, scale: 1, opacity: 1 }}
               exit={{ rotateY: 90, scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.5 }}
-              src={selected}
+              src={process.env.PUBLIC_URL +selected}
               alt="Certificate"
               className="max-w-full max-h-[90vh] rounded-lg shadow-lg"
             />
