@@ -6,7 +6,7 @@ import { FaAward } from 'react-icons/fa';
 const certificates = [
   { id: 1, title: "Java Programming Certification", img: "/images/Java-crt.png" },
   { id: 2, title: "TCS Code Vita Participation", img: "/images/Tcs-crt.png" },
-  // { id: 3, title: "Cloud Computing Certification", img: "./images/Cloud-crt.jpg" }
+  { id: 3, title: "Python Programming Certification", img: "/images/Python_Cert.png" }
 ];
 
 export default function Certificates() {
